@@ -12,6 +12,8 @@ namespace UniversalApiClient.Client
 {
     class HotelClient
     {
+        #region Variable Setup.
+
         string hotelLoc = "ATL";
         string hotelRefPoint = "EIFFEL TOWER";
         int numberOfAdults = 2;
@@ -28,6 +30,8 @@ namespace UniversalApiClient.Client
         private static String rateSupplier;
 
         HotelService.HostToken hostToken = new HotelService.HostToken();
+
+        #endregion
 
         #region public method 
 
@@ -79,30 +83,10 @@ namespace UniversalApiClient.Client
                 LocationType = typeHotelLocation.City
             };
 
-            /*hotelSearchLocation.ReferencePoint = new typeHotelReferencePoint()
-            {
-                Value = hotelRefPoint
-            };*/
-
-            /*List<string> streetAddress = new List<string>();
-            streetAddress.Add("300 Galleria Pkway");
-
-            hotelSearchLocation.HotelAddress = new ConsoleApplication2.HotelService.typeStructuredAddress()
-            {
-                Street = streetAddress.ToArray()
-            };
-
-            
-
-            hotelSearchLocation.HotelAddress.City = "Atlanta";*/
-
-
             hotelSearchAvailabilityRequest.HotelSearchLocation = hotelSearchLocation;
             HotelService.HotelStay hotelStay = GetHotelStay();
 
             hotelSearchAvailabilityRequest.HotelStay = hotelStay;
-            //HotelChain hc = new HotelChain();
-            //hc.Code = "HI";
 
             HotelSearchModifiers hotelSearchModifiers = new HotelSearchModifiers()
             {
@@ -115,7 +99,6 @@ namespace UniversalApiClient.Client
                         Code = providerCode
                     }
                 },
-                //PermittedChains = new HotelChain[]{hc},
                 AvailableHotelsOnly = true
 
             };
@@ -132,16 +115,13 @@ namespace UniversalApiClient.Client
                 hotelSearchclient.Endpoint.EndpointBehaviors.Add(new HttpHeadersEndpointBehavior(httpHeaders));
 
                 hotelSearchAvailabilityResponse = hotelSearchclient.service(hotelSearchAvailabilityRequest);
-                //Console.WriteLine(hotelSearchAvailabilityResponse.HotelSearchResult.Count());
             }
             catch (Exception se)
             {
-                //Console.WriteLine("Error : " + se.Message);
                 hotelSearchclient.Abort();
             }
 
             return hotelSearchAvailabilityResponse;
-
         }
 
         /// <summary>
@@ -169,15 +149,14 @@ namespace UniversalApiClient.Client
                     while (hotelProperties.MoveNext())
                     {
                         HotelService.HotelProperty property = hotelProperties.Current;
-                        if (property.Availability.CompareTo(UniversalApiClient.HotelService.typeHotelAvailability.Available) == 0)
+                        if (property.Availability.CompareTo(HotelService.typeHotelAvailability.Available) == 0)
                         {
-
                             if (property.ReserveRequirement.CompareTo(HotelService.typeReserveRequirement.Other) == 0)
                             {
                                 continue;
                             }
 
-                            if (property.Distance != null)//check lowest distance for closet hotel from the reference point
+                            if (property.Distance != null) //check lowest distance for closet hotel from the reference point
                             {
                                 int distance = Convert.ToInt32(property.Distance.Value);
                                 if (distance < lowestDistance)
@@ -187,7 +166,6 @@ namespace UniversalApiClient.Client
                                     lowestDistance = distance;
                                 }
                             }
-
 
                             IEnumerator<RateInfo> hotelRates = result.RateInfo.ToList().GetEnumerator();
                             while (hotelRates.MoveNext())
@@ -300,12 +278,10 @@ namespace UniversalApiClient.Client
             }
             catch (Exception se)
             {
-                Console.WriteLine("Error : " + se.Message);
                 detailsClient.Abort();
             }
 
             HotelRulesRsp hotelRulesResponse = HotelRules(cheapest.HotelProperty[0]);
-
 
             return detailsResponse;
         }
@@ -640,4 +616,3 @@ namespace UniversalApiClient.Client
         }
     }
 }
-
