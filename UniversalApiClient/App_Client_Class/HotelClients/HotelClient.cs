@@ -106,12 +106,15 @@ namespace UniversalApiClient.Client
             hotelSearchAvailabilityRequest.HotelSearchModifiers = hotelSearchModifiers;
 
             HotelSearchServicePortTypeClient hotelSearchclient = new HotelSearchServicePortTypeClient("HotelSearchServicePort", WsdlService.HOTEL_ENDPOINT);
+
+            // This is the solution if you get 'object readony exception' => "https://stackoverflow.com/questions/199014/getting-object-is-read-only-error-when-setting-clientcredentials-in-wcf"
             hotelSearchclient.ClientCredentials.UserName.UserName = Helper.RetrunUsername();
             hotelSearchclient.ClientCredentials.UserName.Password = Helper.ReturnPassword();
 
             try
             {
                 var httpHeaders = Helper.ReturnHttpHeader();
+                //hotelSearchclient.Endpoint.EndpointBehaviors.RemoveAt(1);
                 hotelSearchclient.Endpoint.EndpointBehaviors.Add(new HttpHeadersEndpointBehavior(httpHeaders));
 
                 hotelSearchAvailabilityResponse = hotelSearchclient.service(hotelSearchAvailabilityRequest);

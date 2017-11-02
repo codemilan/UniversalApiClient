@@ -954,7 +954,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>25763</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:25763/</IISUrl>
+          <IISUrl>http://localhost:3030/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

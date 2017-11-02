@@ -291,7 +291,7 @@ namespace UniversalApiClient.Controllers
         {
             HotelClient hotel = new HotelClient();
             BaseHotelSearchRsp hotelResponse = hotel.HotelAvailabilty(); // Get Hotel Availability
-            ViewBag.HotelSearchRsp = hotelResponse;
+            ViewBag.HotelSearchRsp = ObjectDumper.Dump(hotelResponse);
 
             return View();
         }

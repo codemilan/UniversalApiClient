@@ -33,12 +33,14 @@ namespace UniversalApiClient.Utility
 
         public static string ReturnPassword()
         {
-            return CommonUtility.GetConfigValue(ProjectConstants.PASSWORD);
+            string password = CommonUtility.GetConfigValue(ProjectConstants.PASSWORD);
+            return password;
         }
 
         public static string RetrunUsername()
         {
-            return CommonUtility.GetConfigValue(ProjectConstants.USERNAME);
+            string username = CommonUtility.GetConfigValue(ProjectConstants.USERNAME);
+            return username;
         }
 
         public static Dictionary<string, string> ReturnHttpHeader()
