@@ -33,6 +33,14 @@ namespace UniversalApiClient.Client
 
         #endregion
 
+        public HotelClient(int peopleCount, int rooms, string hotelLocation, string currentLocation)
+        {
+            numberOfAdults = peopleCount;
+            numberOfRooms = rooms;
+            hotelLoc = hotelLocation;
+            hotelRefPoint = currentLocation;
+        }
+
         #region public method 
 
         public static String ClosestHotelCode

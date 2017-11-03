@@ -21,13 +21,6 @@ namespace UniversalApiClient.Controllers
     {
         public ActionResult Search()
         {
-            AvailabilitySearchReq asr = new AvailabilitySearchReq();
-
-            AirService.Airport sourceAirport = new AirService.Airport();
-            sourceAirport.Code = "CPH";
-            AirService.Airport destinationAirport = new AirService.Airport();
-            destinationAirport.Code = "LHR";
-
             return View();
         }
 
@@ -287,11 +280,12 @@ namespace UniversalApiClient.Controllers
             return View();
         }
 
-        public ActionResult HotelSearch()
+        [HttpPost]
+        public ActionResult HotelSearch(int noOfPeople, int noOfRooms, string hotelLocation, string currentLocation)
         {
-            HotelClient hotel = new HotelClient();
+            HotelClient hotel = new HotelClient(noOfPeople, noOfRooms, hotelLocation, currentLocation);
             BaseHotelSearchRsp hotelResponse = hotel.HotelAvailabilty(); // Get Hotel Availability
-            ViewBag.HotelSearchRsp = ObjectDumper.Dump(hotelResponse);
+            ViewBag.HotelSearchRsp = hotelResponse;
 
             return View();
         }

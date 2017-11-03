@@ -1,8 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "HotelSearch";
+    ViewBag.Title = "Hotel Search Results";
 }
 
-<h2>HotelSearch</h2>
+<h2>Hotel Search Results: </h2>
 
-<h4 style="color: red;">@ViewBag.HotelSearchRsp</h4>
+@foreach (var hotel in @ViewBag.HotelSearchRsp)
+{
+    <h4 style="color: red;">ObjectDumper.Dump(@hotel)</h4>
+}
