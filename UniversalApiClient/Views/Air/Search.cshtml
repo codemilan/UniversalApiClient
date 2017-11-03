@@ -5,11 +5,11 @@
 
 <h2>Search</h2>
 
-<form asp-controller="AirController" asp-action="HotelSearch" method="post">
+<form action="/Air/HotelSearch" method="post">
     <!-- Input and Submit elements -->
-    Hotel Location:  <input name="hotelLocation" asp-for="text" /> <br />
-    Current Location:  <input name="currentLocation" asp-for="text" /> <br />
-    No. of People:  <input name="noOfPeople" asp-for="number" /> <br />
-    No. of Rooms:  <input name="noOfRooms" asp-for="number" /> <br />
+    Hotel Location:  <input name="hotelLocation" type="text" /> <br />
+    Current Location:  <input name="currentLocation" type="text" /> <br />
+    No. of People:  <input name="noOfPeople" type="number" /> <br />
+    No. of Rooms:  <input name="noOfRooms" type="number" /> <br />
     <button type="submit">Search</button>
 </form>

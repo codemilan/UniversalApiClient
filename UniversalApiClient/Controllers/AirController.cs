@@ -284,8 +284,8 @@ namespace UniversalApiClient.Controllers
         public ActionResult HotelSearch(int noOfPeople, int noOfRooms, string hotelLocation, string currentLocation)
         {
             HotelClient hotel = new HotelClient(noOfPeople, noOfRooms, hotelLocation, currentLocation);
-            BaseHotelSearchRsp hotelResponse = hotel.HotelAvailabilty(); // Get Hotel Availability
-            ViewBag.HotelSearchRsp = hotelResponse;
+            BaseHotelSearchRsp hotelResponse = hotel.HotelAvailabilty();
+            ViewBag.HotelSearchRsp = hotelResponse.HotelSearchResult.ToArray();
 
             return View();
         }
