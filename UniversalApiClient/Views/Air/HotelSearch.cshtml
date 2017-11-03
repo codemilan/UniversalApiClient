@@ -7,5 +7,12 @@
 
 @foreach (var hotel in @ViewBag.HotelSearchRsp)
 {
-    <h4 style="color: green;">ObjectDumper.Dump(@hotel)</h4>
+    @foreach (var hotelProperty in @hotel)
+    {
+        @foreach (var hotelName in @hotelProperty)
+        {
+            <h4 style="color: green;">@hotelName.Name</h4>
+            <h4 style="color: green;">@hotelName.HotelCode</h4>
+        }
+    }
 }
