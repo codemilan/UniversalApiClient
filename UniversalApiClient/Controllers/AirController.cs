@@ -27,18 +27,20 @@ namespace UniversalApiClient.Controllers
         [HttpPost]
         public ActionResult AirSearch(string sourceLocation, string destinationLocation)
         {
+            AvailabilitySearchRsp avaibalityRsp = new AvailabilitySearchRsp();
             try
             {
                 AirSvcTest airTest = new AirSvcTest(sourceLocation, destinationLocation);
-                AvailabilitySearchRsp avaibalityRsp = airTest.Availability();
+                avaibalityRsp = airTest.Availability();
             }
             catch (Exception e)
             {
                 //usually only the error message is useful, not the full stack
                 //trace, since the stack trace in is your address space...
                 Console.WriteLine("Error : " + e.Message);
-                ViewBag.ErrorText = ObjectDumper.Dump(e);
             }
+
+            ViewBag.flightDetails = avaibalityRsp.AirSegmentList;
 
             return View();
         }

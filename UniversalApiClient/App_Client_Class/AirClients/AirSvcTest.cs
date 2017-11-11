@@ -39,8 +39,8 @@ namespace UniversalApiClient.Client
                 client.Endpoint.EndpointBehaviors.Add(new HttpHeadersEndpointBehavior(httpHeaders));
 
                 rsp = client.service(null, request);
-                Console.WriteLine(rsp.AirItinerarySolution.Count());
-                //Console.WriteLine(rsp.AirSegmentList.Count());
+                // Console.WriteLine(rsp.AirItinerarySolution.Count());
+                // Console.WriteLine(rsp.AirSegmentList.Count());
             }
             catch (Exception se)
             {
