@@ -1,4 +1,7 @@
-﻿using UniversalApiClient.Utility;
+﻿/*
+* This class is responsible to search and give Airport Details in whole or cityName wise. 
+*/
+using UniversalApiClient.Utility;
 using UniversalApiClient.UtilService;
 using System;
 using System.Collections;

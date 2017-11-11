@@ -10,14 +10,19 @@ namespace UniversalApiClient.Client
     class AirLFSTest
     {
         public static String MY_APP_NAME = "UAPI";
-        private string origin = "MEL";
-        private string destination = "SYD";
+        private string origin;
+        private string destination;
+
+        public AirLFSTest(string source, string dest)
+        {
+            origin = source;
+            destination = dest;
+        }
 
         public LowFareSearchRsp LowFareShop(bool solutionResult)
         {
             LowFareSearchReq lowFareSearchReq = new LowFareSearchReq();
             LowFareSearchRsp lowFareSearchRsp;
-
 
             lowFareSearchReq = SetUpLFSSearch(lowFareSearchReq, solutionResult);
 
@@ -30,7 +35,6 @@ namespace UniversalApiClient.Client
                 client.Endpoint.EndpointBehaviors.Add(new HttpHeadersEndpointBehavior(httpHeaders));
 
                 lowFareSearchRsp = client.service(null, lowFareSearchReq);
-                //Console.WriteLine(lowFareSearchRsp.AirSegmentList.Count());
 
                 return lowFareSearchRsp;
             }
@@ -58,10 +62,9 @@ namespace UniversalApiClient.Client
             modifiers.MaxSolutions = string.Format("25");
             lowFareSearchReq.AirSearchModifiers = modifiers;
 
-
             //travel is for denver to san fransisco 2 months from now, one week trip
             SearchAirLeg outbound = AirReq.CreateSearchLeg(origin, destination);
-            AirReq.AddSearchDepartureDate(outbound, Helper.daysInFuture(60));
+            AirReq.AddSearchDepartureDate(outbound, Helper.daysInFuture(5));
             AirReq.AddSearchEconomyPreferred(outbound);
 
             //coming back

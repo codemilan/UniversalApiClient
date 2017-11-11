@@ -5,14 +5,8 @@
 
 <h2>Hotel Search Results: </h2>
 
-@foreach (var hotel in @ViewBag.HotelSearchRsp)
+@foreach (var hotelName in @ViewBag.result)
 {
-    @foreach (var hotelProperty in @hotel)
-    {
-        @foreach (var hotelName in @hotelProperty)
-        {
-            <h4 style="color: green;">@hotelName.Name</h4>
-            <h4 style="color: green;">@hotelName.HotelCode</h4>
-        }
-    }
+     <h4 style="color: green;">@hotelName.Name</h4>
+     <h4 style="color: green;">@hotelName.HotelCode</h4>   
 }

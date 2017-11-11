@@ -164,15 +164,13 @@ namespace UniversalApiClient.Client
             }
             modifiers.PreferredProviders = providers.ToArray();
 
-            List<Carrier> carriers = new List<Carrier>();
-            carriers.Add(new Carrier()
-            {
-                Code = "QF"
-            });
-            modifiers.PermittedCarriers = carriers.ToArray();
+            //List<Carrier> carriers = new List<Carrier>();
+            //carriers.Add(new Carrier()
+            //{
+            //    Code = "GW" // MILAN::remove QF to empty, since it's a PermittedCarrier code-----reasearch for reason.
+            //});
+            //modifiers.PermittedCarriers = carriers.ToArray();
             return modifiers;
-
-
         }
 
         public static SearchAirLeg CreateSearchLeg(String originAirportCode, String destAirportCode)

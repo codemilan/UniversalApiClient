@@ -1,4 +1,7 @@
-﻿using UniversalApiClient.AirService;
+﻿/*
+This class is responsible for getting flights searched result. 
+*/
+using UniversalApiClient.AirService;
 using UniversalApiClient.Utility;
 using System;
 using System.Collections.Generic;
@@ -11,13 +14,19 @@ namespace UniversalApiClient.Client
     class AirSvcTest
     {
         public static String MY_APP_NAME = "UAPI";
-        private string origin = "DEN";
-        private string destination = "SFO";
+        private string origin;
+        private string destination;
 
-        public void Availability()
+        public AirSvcTest(string source, string dest)
+        {
+            origin = source;
+            destination = dest;
+        }
+
+        public AvailabilitySearchRsp Availability()
         {
             AvailabilitySearchReq request = new AvailabilitySearchReq();
-            AvailabilitySearchRsp rsp;
+            AvailabilitySearchRsp rsp = new AvailabilitySearchRsp();
 
             request = SetupRequestForSearch(request);
 
@@ -31,13 +40,15 @@ namespace UniversalApiClient.Client
 
                 rsp = client.service(null, request);
                 Console.WriteLine(rsp.AirItinerarySolution.Count());
-                Console.WriteLine(rsp.AirSegmentList.Count());
+                //Console.WriteLine(rsp.AirSegmentList.Count());
             }
             catch (Exception se)
             {
                 Console.WriteLine("Error : " + se.Message);
                 client.Abort();
             }
+
+            return rsp;
 
             //these checks are just sanity that we can make an availability request
             //assertThat(rsp.getAirItinerarySolution().size(), is(not(0)));
@@ -63,15 +74,14 @@ namespace UniversalApiClient.Client
 
             //travel is for denver to san fransisco 2 months from now, one week trip
             SearchAirLeg outbound = AirReq.CreateSearchLeg(origin, destination);
-            AirReq.AddSearchDepartureDate(outbound, Helper.daysInFuture(60));
+            AirReq.AddSearchDepartureDate(outbound, Helper.daysInFuture(3));
             AirReq.AddSearchEconomyPreferred(outbound);
 
             //coming back
             SearchAirLeg ret = AirReq.CreateSearchLeg(destination, origin);
-            AirReq.AddSearchDepartureDate(ret, Helper.daysInFuture(70));
+            AirReq.AddSearchDepartureDate(ret, Helper.daysInFuture(3));
             //put traveller in econ
             AirReq.AddSearchEconomyPreferred(ret);
-
 
             request.Items = new SearchAirLeg[2];
             request.Items.SetValue(outbound, 0);
@@ -79,6 +89,5 @@ namespace UniversalApiClient.Client
 
             return request;
         }
-
     }
 }
