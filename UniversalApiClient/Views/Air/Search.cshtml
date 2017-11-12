@@ -5,9 +5,109 @@
 
 <h2>Search</h2>
 
-<form action="/Air/AirSearch" method="post">
-    <!-- Input and Submit elements -->
-    Source:  <input name="sourceLocation" type="text" /> <br />
-    Destination:  <input name="destinationLocation" type="text" /> <br />
-    <button type="submit">Search</button>
-</form>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <form action="/Air/AirSearch" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="searchTitle" for="Origin">From</label>
+                </div>
+                <div class="col-md-6">
+                    <input class="my-tip ui-autocomplete-input" title="This field corresponds to /SearchAirLeg/SearchOrigin/CityOrAirport/Code in the LowFareSearchReq call." id="origin" name="Origin" type="text" placeholder="From" autocomplete="off">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="searchTitle" for="Destination">To</label>
+                </div>
+                <div class="col-md-6">
+                    <input id="Destination" class="my-tip ui-autocomplete-input" title="This field corresponds to /SearchAirLeg/SearchDestination/CityOrAirport/Code in the LowFareSearchReq call." name="Destination" type="text" placeholder="To" autocomplete="off">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <input class="my-tip search-input-datepicker hasDatepicker" id="From" name="From" placeholder="Departure" title="This field corresponds to /SearchAirLeg/SearchDepTime/PreferredTime in the LowFareSearchReq call." type="text" value="">
+                </div>
+                <div class="col-md-6">
+                    <input class="my-tip search-input-datepicker hasDatepicker" id="To" name="To" placeholder="Return" title="This field corresponds to /SearchAirLeg[1]/SearchDepTime/PreferredTime in the LowFareSearchReq call." type="text" value="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="searchTitle" for="Adults">Adults</label>
+                </div>
+                <div class="col-md-6">
+                    <select id="searchcmbAdults" data-bind="value: Adults">
+                        <option selected="selected" value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="searchTitle" for="Childrens">Child (2-12)</label>
+                </div>
+                <div class="col-md-6">
+                    <select id="searchcmbChildrens" data-bind="value: Childrens">
+                        <option selected="selected" value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="searchInfants" for="Infants">Infants (0-2)</label>
+                </div>
+                <div class="col-md-6">
+                    <select id="searchcmbInfants" data-bind="value: Infants">
+                        <option selected="selected" value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="searchTitle" for="Gds">Travelport System</label>
+                </div>
+                <div class="col-md-6">
+                    <select data-bind="value: Gds" data-val="true" data-val-required="The Gds field is required." id="Gds" name="Gds">
+                        <option selected="selected" value="0">Galileo</option>
+                        <option value="1">Apollo</option>
+                        <option value="2">Worldspan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-1">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
