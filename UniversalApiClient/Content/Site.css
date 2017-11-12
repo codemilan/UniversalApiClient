@@ -22,3 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.form-div {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: lightgray;
+    padding-top: 20px;
+}
