@@ -8,13 +8,13 @@
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4 form-div">
-        <form action="/Air/AirSearch" method="post" class="form-horizontal">
+        <form action="/Air/AirSearch" method="post" class="form-horizontal" name="air-search-form">
             <div class="row form-group">
                 <div class="col-md-6">
                     <label class="form-label" for="Origin">From :</label>
                 </div>
                 <div class="col-md-6">
-                    <input class="form-control" title="This field corresponds to /SearchAirLeg/SearchOrigin/CityOrAirport/Code in the LowFareSearchReq call." id="origin" name="Origin" type="text" placeholder="From" autocomplete="off">
+                    <input class="form-control" id="origin" name="origin" type="text" placeholder="From">
                 </div>
             </div>
             <div class="row form-group">
@@ -22,7 +22,7 @@
                     <label class="form-label" for="Destination">To :</label>
                 </div>
                 <div class="col-md-6">
-                    <input id="Destination" class="form-control" title="This field corresponds to /SearchAirLeg/SearchDestination/CityOrAirport/Code in the LowFareSearchReq call." name="Destination" type="text" placeholder="To" autocomplete="off">
+                    <input id="Destination" class="form-control" name="destination" type="text" placeholder="To">
                 </div>
             </div>
             <div class="row form-group">
@@ -30,7 +30,7 @@
                     <label class="form-label" for="From">Departure :</label>
                 </div>
                 <div class="col-md-6">
-                    <input class="form-control" id="From" name="From" placeholder="Departure" title="This field corresponds to /SearchAirLeg/SearchDepTime/PreferredTime in the LowFareSearchReq call." type="text" value="">
+                    <input class="form-control" id="departure" name="departure" placeholder="Departure" type="text">
                 </div>
             </div>
             <div class="row form-group">
@@ -38,15 +38,16 @@
                     <label class="form-label" for="To">Return :</label>
                 </div>
                 <div class="col-md-6">
-                    <input class="form-control" id="To" name="To" placeholder="Return" title="This field corresponds to /SearchAirLeg[1]/SearchDepTime/PreferredTime in the LowFareSearchReq call." type="text" value="">
+                    <input class="form-control" id="returning" name="returning" placeholder="Return" type="text">
                 </div>
             </div>
-            <div class="row form-group">
+
+            <!-- <div class="row form-group">
                 <div class="col-md-6">
                     <label class="form-label" for="Adults">Adults :</label>
                 </div>
                 <div class="col-md-6">
-                    <select id="searchcmbAdults" class="form-control">
+                    <select name="adults" id="searchcmbAdults" class="form-control">
                         <option selected="selected" value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -64,7 +65,7 @@
                     <label class="form-label" for="Childrens">Child (2-12) :</label>
                 </div>
                 <div class="col-md-6">
-                    <select id="searchcmbChildrens" class="form-control">
+                    <select id="searchcmbChildren" name="children" class="form-control">
                         <option selected="selected" value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -83,7 +84,7 @@
                     <label class="form-label" for="Infants">Infants (0-2) :</label>
                 </div>
                 <div class="col-md-6">
-                    <select id="searchcmbInfants" class="form-control">
+                    <select id="searchcmbInfants" name="infants" class="form-control">
                         <option selected="selected" value="0">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -96,19 +97,22 @@
                         <option value="9">9</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
+
             <div class="row form-group">
                 <div class="col-md-6">
                     <label class="form-label" for="Gds">Travelport System :</label>
                 </div>
                 <div class="col-md-6">
-                    <select class="form-control" id="Gds" name="Gds">
-                        <option selected="selected" value="0">Galileo</option>
+                    <select class="form-control" id="Gds" name="gds">
+                        <option selected="selected" value="1G">Galileo</option>
                         <option value="1">Apollo</option>
                         <option value="2">Worldspan</option>
                     </select>
                 </div>
-            </div></br></br>
+            </div>
+            
+            </br></br>
 
             <div class="row form-group">
                 <div class="col-md-6">

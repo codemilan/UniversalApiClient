@@ -16,11 +16,17 @@ namespace UniversalApiClient.Client
         public static String MY_APP_NAME = "UAPI";
         private string origin;
         private string destination;
+        private string departure;
+        private string returning;
+        private string gds_provider;
 
-        public AirSvcTest(string source, string dest)
+        public AirSvcTest(string source, string dest, string departure, string returning, string gds_provider)
         {
-            origin = source;
-            destination = dest;
+            this.origin = source;
+            this.destination = dest;
+            this.departure = departure;
+            this.returning = returning;
+            this.gds_provider = gds_provider;
         }
 
         public AvailabilitySearchRsp Availability()
@@ -49,21 +55,15 @@ namespace UniversalApiClient.Client
             }
 
             return rsp;
-
-            //these checks are just sanity that we can make an availability request
-            //assertThat(rsp.getAirItinerarySolution().size(), is(not(0)));
-            //assertThat(rsp.getAirSegmentList().getAirSegment().size(), is(not(0)));
         }
 
         private AvailabilitySearchReq SetupRequestForSearch(AvailabilitySearchReq request)
         {
-            // TODO Auto-generated method stub
-
             //add in the tport branch code
             request.TargetBranch = CommonUtility.GetConfigValue(ProjectConstants.G_TARGET_BRANCH);
 
             //set the GDS via a search modifier
-            String[] gds = new String[] { "1G" };
+            String[] gds = { this.gds_provider }; // MILAN:: gds field
             AirSearchModifiers modifiers = AirReq.CreateModifiersWithProviders(gds);
 
             AirReq.AddPointOfSale(request, MY_APP_NAME);
@@ -74,12 +74,14 @@ namespace UniversalApiClient.Client
 
             //travel is for denver to san fransisco 2 months from now, one week trip
             SearchAirLeg outbound = AirReq.CreateSearchLeg(origin, destination);
-            AirReq.AddSearchDepartureDate(outbound, Helper.daysInFuture(3));
+            string dep = Helper.daysInFuture(3); // MILAN:: departure field
+            AirReq.AddSearchDepartureDate(outbound, this.departure);
             AirReq.AddSearchEconomyPreferred(outbound);
 
             //coming back
             SearchAirLeg ret = AirReq.CreateSearchLeg(destination, origin);
-            AirReq.AddSearchDepartureDate(ret, Helper.daysInFuture(3));
+            //string returning = Helper.daysInFuture(3); // MILAN:: returning field
+            AirReq.AddSearchDepartureDate(ret, this.returning);
             //put traveller in econ
             AirReq.AddSearchEconomyPreferred(ret);
 

@@ -25,18 +25,27 @@ namespace UniversalApiClient.Controllers
         }
 
         [HttpPost]
-        public ActionResult AirSearch(string sourceLocation, string destinationLocation)
+        public ActionResult AirSearch()
         {
+            var origin = Request["origin"];
+            var destination = Request["destination"];
+            var departure = string.Format("{0:yyyy-MM-dd}", DateTime.Parse(Request["departure"]));
+            var returning = string.Format("{0:yyyy-MM-dd}", DateTime.Parse(Request["returning"]));
+            var gds = Request["gds"];
+
+            var adult = Request["adults"];
+            var children = Request["children"];
+            var infants = Request["infants"];
+
             AvailabilitySearchRsp avaibalityRsp = new AvailabilitySearchRsp();
+
             try
             {
-                AirSvcTest airTest = new AirSvcTest(sourceLocation, destinationLocation);
+                AirSvcTest airTest = new AirSvcTest(origin, destination, departure, returning, gds);
                 avaibalityRsp = airTest.Availability();
             }
             catch (Exception e)
             {
-                //usually only the error message is useful, not the full stack
-                //trace, since the stack trace in is your address space...
                 Console.WriteLine("Error : " + e.Message);
             }
 

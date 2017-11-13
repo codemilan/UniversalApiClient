@@ -38,5 +38,14 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/jquery.datetimepicker.js"></script>
+    <link href="~/Content/jquery.datetimepicker.css" rel="stylesheet" />
+    <script>
+        $(function () { // will trigger when the document is ready
+            $('#departure').datetimepicker();
+            $('#returning').datetimepicker();
+       });
+    </script>
 </body>
 </html>
