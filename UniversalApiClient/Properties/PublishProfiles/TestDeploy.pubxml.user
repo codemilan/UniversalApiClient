@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword />
-    <_PublishTargetUrl>ftp:// ftp.site4now.net/TravelportUniversal</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://ftp.site4now.net/TravelportUniversal</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -80,7 +80,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2017 15:31:20</publishTime>
     </File>
     <File Include="bin/UniversalApiClient.dll">
-      <publishTime>11/11/2017 23:00:14</publishTime>
+      <publishTime>11/13/2017 16:18:50</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>10/27/2017 15:31:23</publishTime>
@@ -91,8 +91,239 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/bootstrap.min.css">
       <publishTime>10/27/2017 15:31:05</publishTime>
     </File>
+    <File Include="Content/bootstrap/alerts.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/badges.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/bootstrap.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/breadcrumbs.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/button-groups.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/buttons.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/carousel.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/close.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/code.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/component-animations.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/dropdowns.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/forms.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/glyphicons.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/grid.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/input-groups.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/jumbotron.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/labels.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/list-group.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/media.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/alerts.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/background-variant.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/border-radius.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/buttons.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/center-block.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/clearfix.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/forms.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/gradients.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/grid-framework.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/grid.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/hide-text.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/image.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/labels.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/list-group.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/nav-divider.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/nav-vertical-align.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/opacity.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/pagination.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/panels.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/progress-bar.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/reset-filter.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/reset-text.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/resize.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/responsive-visibility.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/size.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/tab-focus.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/table-row.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/text-emphasis.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/text-overflow.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/mixins/vendor-prefixes.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/modals.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/navbar.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/navs.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/normalize.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/pager.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/pagination.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/panels.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/popovers.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/print.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/progress-bars.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/responsive-embed.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/responsive-utilities.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/scaffolding.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/tables.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/theme.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/thumbnails.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/tooltip.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/type.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/utilities.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/variables.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/bootstrap/wells.less">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Content/jquery.datetimepicker.css">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
     <File Include="Content/Site.css">
-      <publishTime>10/27/2017 15:30:52</publishTime>
+      <publishTime>11/13/2017 16:14:02</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>10/27/2017 15:30:52</publishTime>
@@ -113,13 +344,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2017 15:30:52</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>10/27/2017 15:31:37</publishTime>
+      <publishTime>11/13/2017 15:15:39</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>10/27/2017 15:31:05</publishTime>
+      <publishTime>11/13/2017 15:15:39</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>10/27/2017 15:31:04</publishTime>
+      <publishTime>11/13/2017 15:15:39</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>10/27/2017 15:31:12</publishTime>
@@ -129,6 +360,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
       <publishTime>10/27/2017 15:31:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.datetimepicker.js">
+      <publishTime>11/13/2017 15:15:39</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>10/27/2017 15:31:24</publishTime>
@@ -145,6 +379,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>10/27/2017 15:31:22</publishTime>
     </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Scripts/moment-with-locales.min.js">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
+    <File Include="Scripts/moment.min.js">
+      <publishTime>11/13/2017 15:15:39</publishTime>
+    </File>
     <File Include="Scripts/respond.js">
       <publishTime>10/27/2017 15:31:23</publishTime>
     </File>
@@ -152,7 +398,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2017 15:31:23</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>10/27/2017 15:31:22</publishTime>
+      <publishTime>11/13/2017 15:15:39</publishTime>
     </File>
     <File Include="Service References/AirService/UniversalApiClient.AirService.AirExchangeQuoteRsp.datasource">
       <publishTime>11/01/2017 17:00:09</publishTime>
@@ -707,13 +953,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/01/2017 17:04:18</publishTime>
     </File>
     <File Include="Views/Air/AirSearch.cshtml">
-      <publishTime>11/11/2017 20:19:50</publishTime>
+      <publishTime>11/13/2017 15:28:57</publishTime>
     </File>
     <File Include="Views/Air/HotelSearch.cshtml">
       <publishTime>11/03/2017 18:41:09</publishTime>
     </File>
     <File Include="Views/Air/Search.cshtml">
-      <publishTime>11/11/2017 21:27:09</publishTime>
+      <publishTime>11/13/2017 16:15:12</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>10/27/2017 15:30:52</publishTime>
@@ -722,13 +968,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2017 15:30:52</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/27/2017 15:30:52</publishTime>
+      <publishTime>11/13/2017 15:25:07</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>10/27/2017 15:30:52</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/27/2017 15:30:52</publishTime>
+      <publishTime>11/13/2017 15:15:39</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>10/27/2017 15:30:52</publishTime>
@@ -737,7 +983,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/27/2017 15:30:52</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/11/2017 23:00:24</publishTime>
+      <publishTime>11/13/2017 16:21:46</publishTime>
     </File>
   </ItemGroup>
 </Project>

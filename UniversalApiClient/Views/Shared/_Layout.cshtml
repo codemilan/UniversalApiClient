@@ -43,8 +43,15 @@
     <link href="~/Content/jquery.datetimepicker.css" rel="stylesheet" />
     <script>
         $(function () { // will trigger when the document is ready
-            $('#departure').datetimepicker();
-            $('#returning').datetimepicker();
+            $('#departure').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d'
+            });
+
+            $('#returning').datetimepicker({
+                timepicker: false,
+                format: 'Y-m-d'
+            });
        });
     </script>
 </body>
