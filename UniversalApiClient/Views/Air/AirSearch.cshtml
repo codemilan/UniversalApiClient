@@ -1,5 +1,6 @@
 ﻿<div class="testApi">
-    <h2>Flight Schedule Listing...</h2>&nbsp;&nbsp;<a href="/Air/Search" class="btn btn-primary">Back to Search</a>
+    <h2>Flight Schedule Listing...</h2>
+    <a href="/Air/Search" class="btn btn-primary" style="margin-bottom: 10px;">Back to Search</a>
 
     @if (ViewBag.flightDetails == null)
     {
@@ -7,17 +8,19 @@
     }
     else
     {
-        foreach (var fd in ViewBag.flightDetails)
-        {
-            <div>
-                <h5>Flight Number: @fd.FlightNumber</h5>
-                <h5>Flight Time: @fd.FlightTime</h5>
-                <h5>Flight Arrival Time: @fd.ArrivalTime</h5>
-                <h5>Flight Departure Time: @fd.DepartureTime</h5>
-                <h5>Carrier: @fd.Carrier</h5>
-                <h5>Origin: @fd.Origin</h5>
-                <h5>Destination: @fd.Destination</h5>
-            </div><hr />
-        }
+        <div class="row">
+            @foreach (var fd in ViewBag.flightDetails)
+            {
+                <div class="col-md-4" style="margin-bottom: 5px; background-color: lightblue;">
+                    <h5><span class="h5-result">Flight Number:</span> @fd.FlightNumber</h5>
+                    <h5><span class="h5-result">Flight Time:</span> @fd.FlightTime</h5>
+                    <h5><span class="h5-result">Flight Arrival Time:</span> @fd.ArrivalTime</h5>
+                    <h5><span class="h5-result">Flight Departure Time:</span> @fd.DepartureTime</h5>
+                    <h5><span class="h5-result">Carrier:</span> @fd.Carrier</h5>
+                    <h5><span class="h5-result">Origin:</span> @fd.Origin</h5>
+                    <h5><span class="h5-result">Destination:</span> @fd.Destination</h5>
+                </div>
+            }
+        </div>
     }
 </div>

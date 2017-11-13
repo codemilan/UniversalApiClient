@@ -30,3 +30,8 @@ textarea {
     background-color: lightgray;
     padding-top: 20px;
 }
+
+.h5-result {
+    color: darkblue;
+    font-style:italic;
+}
